@@ -1,0 +1,5 @@
+<coverage processUncoveredFiles="true">
+  <include>
+    <directory suffix=".php">LIBRARY_SYSTEM/src/</directory>
+  </include>
+</coverage>
