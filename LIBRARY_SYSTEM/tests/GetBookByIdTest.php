@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 require_once __DIR__ . '/../src/core/usecases/GetBookById.php';
 
-class GetBookTest extends TestCase
+class GetBookByIdTest extends TestCase
 {
     private $bookRepository;
     private $getBookById;
