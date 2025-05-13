@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1747168170">
-  <project timestamp="1747168170">
+<coverage generated="1747168591">
+  <project timestamp="1747168591">
     <file name="C:\Users\assas\OneDrive - ulm.ac.id\SEMESTER 6\PPKPL\LIBRARY_SYSTEM\src\core\entities\Book.php">
       <class name="Book" namespace="global">
         <metrics complexity="23" methods="13" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="51" coveredelements="51"/>
@@ -72,6 +72,18 @@
       <line num="16" type="stmt" count="1"/>
       <line num="17" type="stmt" count="1"/>
       <metrics loc="22" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+    </file>
+    <file name="C:\Users\assas\OneDrive - ulm.ac.id\SEMESTER 6\PPKPL\LIBRARY_SYSTEM\src\core\usecases\DeleteBook.php">
+      <class name="DeleteBook" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </class>
+      <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="11" type="stmt" count="2"/>
+      <line num="14" type="method" name="execute" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="17" type="stmt" count="2"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
     </file>
     <file name="C:\Users\assas\OneDrive - ulm.ac.id\SEMESTER 6\PPKPL\LIBRARY_SYSTEM\src\core\usecases\GetAllBooks.php">
       <class name="GetAllBooks" namespace="global">
@@ -433,6 +445,30 @@
       <line num="284" type="stmt" count="1"/>
       <metrics loc="288" ncloc="234" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="137" coveredstatements="137" elements="152" coveredelements="152"/>
     </file>
+    <file name="C:\Users\assas\OneDrive - ulm.ac.id\SEMESTER 6\PPKPL\LIBRARY_SYSTEM\tests\DeleteBookTest.php">
+      <class name="DeleteBookTest" namespace="global">
+        <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+      </class>
+      <line num="12" type="method" name="setUp" visibility="protected" complexity="1" crap="1" count="2"/>
+      <line num="15" type="stmt" count="2"/>
+      <line num="16" type="stmt" count="2"/>
+      <line num="19" type="method" name="testExecuteDeletesBook" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="34" type="method" name="testExecuteThrowsExceptionOnError" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <metrics loc="53" ncloc="45" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+    </file>
     <file name="C:\Users\assas\OneDrive - ulm.ac.id\SEMESTER 6\PPKPL\LIBRARY_SYSTEM\tests\GetAllBooksTest.php">
       <class name="GetAllBooksTest" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
@@ -526,8 +562,8 @@
       <line num="46" type="stmt" count="1"/>
       <line num="47" type="stmt" count="1"/>
       <line num="50" type="stmt" count="1"/>
-      <metrics loc="56" ncloc="48" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+      <metrics loc="54" ncloc="46" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
     </file>
-    <metrics files="14" loc="983" ncloc="874" classes="12" methods="76" coveredmethods="76" conditionals="0" coveredconditionals="0" statements="373" coveredstatements="373" elements="449" coveredelements="449"/>
+    <metrics files="16" loc="1058" ncloc="941" classes="14" methods="81" coveredmethods="81" conditionals="0" coveredconditionals="0" statements="392" coveredstatements="392" elements="473" coveredelements="473"/>
   </project>
 </coverage>
