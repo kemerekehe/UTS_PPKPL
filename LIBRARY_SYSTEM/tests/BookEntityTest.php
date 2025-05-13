@@ -1,12 +1,9 @@
 <?php
-
 use PHPUnit\Framework\TestCase;
-
 require_once __DIR__ . '/../src/core/entities/Book.php';
 
 class BookEntityTest extends TestCase
 {
-
     public function testValidBook()
     {
         $book = new Book('Laskar Pelangi', 'Andrea Hirata', '2005-06-01', 5);
@@ -53,6 +50,27 @@ class BookEntityTest extends TestCase
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage("Published date must be in YYYY-MM-DD format");
         $book = new Book('Laskar Pelangi', 'Andrea Hirata', '05-2021-01', 5);  // Format tanggal salah
+    }
+
+    public function testInvalidDateWithWrongFormat()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Published date must be in YYYY-MM-DD format");
+        $book = new Book('Laskar Pelangi', 'Andrea Hirata', '2021/01/01', 5);  // Format tanggal salah
+    }
+
+    public function testInvalidDateWithNonDateString()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Published date must be in YYYY-MM-DD format");
+        $book = new Book('Laskar Pelangi', 'Andrea Hirata', 'not-a-date', 5);  // String bukan tanggal
+    }
+
+    public function testInvalidDateWithEmptyDate()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Published date cannot be empty");
+        $book = new Book('Laskar Pelangi', 'Andrea Hirata', '', 5);  // Tanggal kosong
     }
 
     public function testInvalidDateWithNonexistentDate()
@@ -103,6 +121,7 @@ class BookEntityTest extends TestCase
         $this->assertEquals('2022-01-01', $book->getPublishedDate());
     }
 
+    // Test untuk panjang karakter judul dan penulis
     public function testSetAndGetLongTitle()
     {
         $longTitle = str_repeat('A', 255); // Judul yang sangat panjang (misalnya 255 karakter)
@@ -145,4 +164,13 @@ class BookEntityTest extends TestCase
         $book->setId(10);
         $this->assertEquals(10, $book->getId());
     }
+
+    // Test untuk validasi tambahan
+    public function testValidBookWithLongTitle()
+    {
+        $longTitle = str_repeat('A', 300); // Judul yang sangat panjang (misalnya 300 karakter)
+        $book = new Book($longTitle, 'Andrea Hirata', '2005-06-01', 5);
+        $this->assertTrue($book->isValid()); // Validasi buku harus tetap benar meski judul panjang
+    }
 }
+?>

@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../entities/Book.php';
-
 interface BookRepositoryInterface
 {
     public function save(Book $book);            // Add: Menyimpan buku baru

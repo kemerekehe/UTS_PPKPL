@@ -14,9 +14,13 @@ class Book {
         $this->quantity = $quantity;
         $this->id = $id;
 
-        if (!$this->isValid()) {
-            throw new \Exception("Invalid book data");
-        }
+        try {
+        // Memanggil isValid untuk memeriksa validitas data
+        $this->isValid();
+    } catch (\Exception $e) {
+        // Meneruskan pengecualian yang dilempar oleh isValid() tanpa mengubahnya
+        throw $e;  // Tidak ada perubahan pada pengecualian yang dilemparkan
+    }
     }
 
     // Getter for Title
